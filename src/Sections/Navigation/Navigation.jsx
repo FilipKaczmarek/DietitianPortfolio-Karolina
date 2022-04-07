@@ -1,34 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 // import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
-import DesktopNavMenu from '../../Components/DesktopNavMenu/DesktopNavMenu.jsx'
+import NavMenu from "../../Components/NavMenu/NavMenu.jsx";
+import MenuIconOpen from "../../Components/MenuIconOpen/MenuIconOpen.jsx";
+import ManuIconClosed from "../../Components/ManuIconClosed/ManuIconClosed.jsx";
 
 export const Navigation = ({ className }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className={`border-b-4 border-solid shadow-md ${className ? className : ""}`}>
+    <nav
+      className={`border-b-4 border-solid shadow-md ${
+        className ? className : ""
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto flex flex-row justify-between items-center">
         <div className="py-5">
           <span className="italic cursor-pointer">Karolina Czajkowska</span>
           {/* <Link to='/'></Link> */}
         </div>
-        <DesktopNavMenu />
-        <div>
-            Icon
-        </div>
+        <NavMenu />
+        <button className="py-2.5 cursor-pointer">
+          <MenuIconOpen
+            className={`w-[40px] h-[40px] ${isMenuOpen ? "hidden" : "block"}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
+          <ManuIconClosed
+            className={`w-[40px] h-[40px] ${isMenuOpen ? "block" : "hidden"}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
+        </button>
       </div>
-=======
-export const Navigation = ({className}) => {
-    return <nav className={`${className ? className : ''}`}> 
-
->>>>>>> develop
     </nav>
   );
 };
 
 Navigation.propTypes = {
-    className: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Navigation;

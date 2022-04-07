@@ -5,23 +5,15 @@ import Navigation from "./Sections/Navigation/Navigation";
 
 function App() {
   return (
-<<<<<<< HEAD
       <Router>
-        <Navigation />
-        <main>
+        <Navigation className={'font-poppins'}/>
+        <main className="font-poppins">
           <Routes>
             {/* <Route path="/" exact component={""} />
             <Route path="/about" component={""} /> */}
           </Routes>
         </main>
       </Router>
-=======
-    <div className="App">
-      <Navigation />
-      <main>
-      </main>
-    </div>
->>>>>>> develop
   );
 }
 
