@@ -5,6 +5,7 @@ import Navigation from "./Sections/Navigation/Navigation";
 
 function App() {
   return (
+<<<<<<< HEAD
       <Router>
         <Navigation />
         <main>
@@ -14,6 +15,13 @@ function App() {
           </Routes>
         </main>
       </Router>
+=======
+    <div className="App">
+      <Navigation />
+      <main>
+      </main>
+    </div>
+>>>>>>> develop
   );
 }
 

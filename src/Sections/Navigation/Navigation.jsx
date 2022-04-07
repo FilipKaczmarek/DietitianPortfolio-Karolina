@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 import DesktopNavMenu from '../../Components/DesktopNavMenu/DesktopNavMenu.jsx'
 
 export const Navigation = ({ className }) => {
@@ -17,6 +18,11 @@ export const Navigation = ({ className }) => {
             Icon
         </div>
       </div>
+=======
+export const Navigation = ({className}) => {
+    return <nav className={`${className ? className : ''}`}> 
+
+>>>>>>> develop
     </nav>
   );
 };
