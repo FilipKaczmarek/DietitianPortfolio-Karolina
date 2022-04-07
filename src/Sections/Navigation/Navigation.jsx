@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const Navigation = ({className}) => {
     return <nav className={`${className ? className : ''}`}> 
-    test
+
     </nav>
 }
 
