@@ -61,61 +61,42 @@ export const Hero = ({ className }) => {
           }}
           data-swiper-parallax="-23%"
         ></div>
-        <SwiperSlide className="w-screen h-[80vh]">
-          <div className="max-w-screen-xl mx-auto h-full flex flex-col items-end justify-center">
-            <h1
-              className="title w-6/12 justify-end"
-              data-swiper-parallax="-300"
-            >
-              Title
-            </h1>
-            <p className="text w-6/12" data-swiper-parallax="-100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="w-screen h-[80vh]">
-          <div className="max-w-screen-xl mx-auto">
-            <div className="max-w-screen-xl mx-auto">
-              <h1 className="title" data-swiper-parallax="-300">
-                Title
-              </h1>
-              <div className="text" data-swiper-parallax="-100">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam dictum mattis velit, sit amet faucibus felis iaculis
-                  nec. Nulla laoreet justo vitae porttitor porttitor.
-                  Suspendisse in sem justo.
+        {content.map((contentElement) => {
+          return (
+            <SwiperSlide className="w-screen h-[80vh]" key={contentElement.id}>
+              <div className="max-w-screen-xl mx-auto h-full flex flex-col items-end justify-center">
+                <h1
+                  className={`title text-2xl font-bold pb-2
+                  ${
+                    contentElement.id === 1
+                      ? "w-5/12"
+                      : contentElement.id === 2
+                      ? "w-6/12"
+                      : "w-7/12"
+                  }`}
+                  data-swiper-parallax="-300"
+                >
+                  {contentElement.title}
+                </h1>
+                <p
+                  className={`title text-lg leading-relaxed
+                  ${
+                    contentElement.id === 1
+                      ? "w-5/12"
+                      : contentElement.id === 2
+                      ? "w-6/12"
+                      : "w-7/12"
+                  }`}
+                  data-swiper-parallax="-100"
+                >
+                  {contentElement.textContent}
                 </p>
               </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="w-screen h-[80vh]">
-          <div className="max-w-screen-xl mx-auto">
-            <div className="max-w-screen-xl mx-auto">
-              <h1 className="title" data-swiper-parallax="-300">
-                Title
-              </h1>
-              <div className="text" data-swiper-parallax="-100">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam dictum mattis velit, sit amet faucibus felis iaculis
-                  nec. Nulla laoreet justo vitae porttitor porttitor.
-                  Suspendisse in sem justo.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
-
-    // <div className="max-w-screen-xl mx-auto">
-
-    // </div>
   );
 };
 
