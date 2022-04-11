@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay, Parallax } from "swiper";
 
+import Services from "./Services/Services.jsx";
 import Transformation from "./TransformationSection/Transformation.jsx";
 
 import "swiper/css";
@@ -103,7 +104,8 @@ export const Hero = ({ className }) => {
           })}
         </Swiper>
       </div>
-      <Transformation></Transformation>
+      <Services />
+      <Transformation />
     </div>
   );
 };
