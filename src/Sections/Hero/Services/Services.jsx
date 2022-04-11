@@ -5,7 +5,7 @@ import ServicesCard from "../../../Components/ServicesCard/ServicesCard.jsx";
 
 export const Services = ({ className }) => {
   return (
-    <div className="max-w-screen-xl mx-auto flex flex-row justify-center my-5 py-5">
+    <div className="max-w-screen-xl mx-auto flex flex-row justify-around my-[50px] py-10">
       <ServicesCard
         title={"Diet Plan"}
         cardContent={
@@ -17,21 +17,21 @@ export const Services = ({ className }) => {
         }
       />
       <ServicesCard
-        title={"Diet Plan"}
+        title={"Recipes"}
         cardContent={
           "Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
         }
-        imgSrc={"./images/healthyBowl.jpg"}
+        imgSrc={"./images/recipe.jpg"}
         imgAlt={
           "Picture a bowl of healthy foods (lettuce, corn, chickpeas, etc.)"
         }
       />
       <ServicesCard
-        title={"Diet Plan"}
+        title={"Diet & Fitness Consulting"}
         cardContent={
           "Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
         }
-        imgSrc={"./images/healthyBowl.jpg"}
+        imgSrc={"./images/fitness.jpg"}
         imgAlt={
           "Picture a bowl of healthy foods (lettuce, corn, chickpeas, etc.)"
         }

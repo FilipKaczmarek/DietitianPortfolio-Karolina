@@ -6,14 +6,14 @@ export const Services = ({ className, title, cardContent, imgSrc, imgAlt }) => {
     <div
       className={`${
         className ? className : ""
-      } max-w-[300px] h-auto flex flex-col justify-center items-center drop-shadow-lg hover:drop-shadow-2xl`}
+      } w-[320px] min-h-[350px] flex flex-col justify-center items-center rounded-md bg-white drop-shadow-xl hover:drop-shadow-2xl mx-4`}
     >
-      <div className="w-6/12 h-6/12 rounded-full">
-        <img className="rounded-full" src={imgSrc} alt={imgAlt} />
+      <div className="">
+        <img className="w-[150px] h-[150px] object-cover rounded-full" src={imgSrc} alt={imgAlt} />
       </div>
-      <div className="p-2">
-        <h1 className="text-lg">{title ? title : ""}</h1>
-        <p>{cardContent}</p>
+      <div className="p-2 text-center">
+        <h1 className="font-normal">{title ? title : ""}</h1>
+        <p className="font-thin">{cardContent}</p>
       </div>
     </div>
   );
