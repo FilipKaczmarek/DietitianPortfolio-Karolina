@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navigation from "./Sections/Navigation/Navigation";
+import Navigation from "./Sections/Navigation/Navigation.jsx";
 import Hero from './Sections/Hero/Hero.jsx'
+import Footer from "./Sections/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/about" component={""} /> */}
           </Routes>
         </main>
+        <Footer />
       </Router>
   );
 }
