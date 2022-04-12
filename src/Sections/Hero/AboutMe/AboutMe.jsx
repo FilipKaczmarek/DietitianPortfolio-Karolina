@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import './AboutMe.css'
+
 export const AboutMe = () => {
   return (
-    <div className="w-screen h-[85vh] bg-[#fcbfb5]">
+    <div className="w-screen min-h-[85vh] bg-[#fcbfb5] py-4">
       <div className="max-w-screen-xl mx-auto h-full grid grid-cols-3 grid-rows-2 gap-4 justify-items-center">
         <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex justify-end items-end">
           <img
-            className="max-w-[80%]"
+            className="max-w-[80%] h-auto picture--first"
             src="./images/randomPerson.jpg"
             alt="Picter of me cooking"
           />
@@ -56,7 +58,7 @@ export const AboutMe = () => {
         </div>
         <div className="col-start-3 col-end-4 row-start-2 row-end-3 flex justify-start items-start">
           <img
-            className="max-w-[80%]"
+            className="max-w-[80%] h-auto picture--second"
             src="./images/randomPerson.jpg"
             alt="Picter of me cooking"
           />
