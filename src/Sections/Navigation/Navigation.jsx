@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import NavMenu from "../../Components/NavMenu/NavMenu.jsx";
 import MenuIconOpen from "../../Components/MenuIconOpen/MenuIconOpen.jsx";
 import ManuIconClosed from "../../Components/ManuIconClosed/ManuIconClosed.jsx";
+import MobileMenu from "../../Components/MobileMenu/MobileMenu.jsx";
 
 export const Navigation = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav
-      className={`border-b-4 border-solid shadow-md px-8 xl:px-0 ${
+      className={`border-b-4 border-solid shadow-md relative${
         className ? className : ""
       }`}
     >
@@ -23,7 +24,7 @@ export const Navigation = ({ className }) => {
           </div>
         </div>
         <NavMenu className="hidden md:block" />
-        <button className="py-2.5 cursor-pointer">
+        <button className="py-2.5 cursor-pointer md:hidden">
           <MenuIconOpen
             className={`w-[40px] h-[40px] ${isMenuOpen ? "hidden" : "block"}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -34,6 +35,9 @@ export const Navigation = ({ className }) => {
           />
         </button>
       </div>
+      {isMenuOpen ? (
+        <MobileMenu className={`absolute top-[64] z-40 w-screen h-[100vh] bg-white ${isMenuOpen ? 'animate-[mobileMenuAnimation_3s_ease-in-out]' : ''}`} />
+      ) : null}
     </nav>
   );
 };
