@@ -1,23 +1,27 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'] 
+        poppins: ["Poppins", "sans-serif"],
+      },
+      animation: {
+        showNavList: "showNavList 3s ease",
+        hideNavList: "hideNavList 1.5s ease",
+        menuList: "all 3s ease",
       },
       keyframes: {
-        mobileMenuAnimation: {
-          '0%': { transform: 'h-[0vh]' },
-          '20%': { transform: 'h-[20vh]' },
-          '40%': { transform: 'h-[40vh]' },
-          '60%': { transform: 'h-[60vh]' },
-          '80%': { transform: 'h-[80vh]' },
-          '100%': { transform: 'h-[100vh]' },
-        }
+        showNavList: {
+          "0%": { height: "0vh" },
+          "100%": { height: "100vh" },
+        },
+        hideNavList: {
+          "0%": { height: "100vh" },
+          "50%": { color: "white" },
+          "100%": { height: "0vh", color: "white" },
+        },
       },
     },
   },
   plugins: [],
-}
+};

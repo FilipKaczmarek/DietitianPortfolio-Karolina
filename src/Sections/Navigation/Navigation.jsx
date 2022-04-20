@@ -7,8 +7,12 @@ import MenuIconOpen from "../../Components/MenuIconOpen/MenuIconOpen.jsx";
 import ManuIconClosed from "../../Components/ManuIconClosed/ManuIconClosed.jsx";
 import MobileMenu from "../../Components/MobileMenu/MobileMenu.jsx";
 
+import "./navigation.css";
+
 export const Navigation = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuClicked, setIsMenuClicked] = useState(true);
+
   return (
     <nav
       className={`border-b-4 border-solid shadow-md relative${
@@ -27,16 +31,28 @@ export const Navigation = ({ className }) => {
         <button className="py-2.5 cursor-pointer md:hidden">
           <MenuIconOpen
             className={`w-[40px] h-[40px] ${isMenuOpen ? "hidden" : "block"}`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              setIsMenuClicked(!isMenuClicked);
+            }}
           />
           <ManuIconClosed
             className={`w-[40px] h-[40px] ${isMenuOpen ? "block" : "hidden"}`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              setIsMenuClicked(!isMenuClicked);
+              setTimeout(() => setIsMenuOpen(!isMenuOpen), 1300);
+            }}
           />
         </button>
       </div>
       {isMenuOpen ? (
-        <MobileMenu className={`absolute top-[64] z-40 w-screen h-[100vh] bg-white ${isMenuOpen ? 'animate-[mobileMenuAnimation_3s_ease-in-out]' : ''}`} />
+        <MobileMenu
+          className={`absolute z-40 w-screen bg-white transition-[height] ease-in-out	mobile-menu ${
+            isMenuClicked
+              ? "animate-hideNavList"
+              : "delay-150 animate-showNavList"
+          }`}
+        />
       ) : null}
     </nav>
   );
