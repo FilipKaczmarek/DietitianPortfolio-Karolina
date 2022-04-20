@@ -13,6 +13,11 @@ export const Navigation = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuClicked, setIsMenuClicked] = useState(true);
 
+  const handleMobileMenuCloser = () => {
+    setIsMenuClicked(!isMenuClicked);
+    setTimeout(() => setIsMenuOpen(!isMenuOpen), 1300);
+  };
+
   return (
     <nav
       className={`border-b-4 border-solid shadow-md relative${
@@ -38,15 +43,13 @@ export const Navigation = ({ className }) => {
           />
           <ManuIconClosed
             className={`w-[40px] h-[40px] ${isMenuOpen ? "block" : "hidden"}`}
-            onClick={() => {
-              setIsMenuClicked(!isMenuClicked);
-              setTimeout(() => setIsMenuOpen(!isMenuOpen), 1300);
-            }}
+            onClick={() => handleMobileMenuCloser()}
           />
         </button>
       </div>
       {isMenuOpen ? (
         <MobileMenu
+          itemsHandlerEvent={handleMobileMenuCloser}
           className={`absolute z-40 w-screen bg-white transition-[height] ease-in-out	mobile-menu ${
             isMenuClicked
               ? "animate-hideNavList"
