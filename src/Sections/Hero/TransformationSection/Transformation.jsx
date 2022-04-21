@@ -11,14 +11,14 @@ import "./transformation.css";
 
 export const Transformation = ({ className }) => {
   return (
-    <div className="max-w-screen-xl mx-auto flex flex-row items-center my-5 py-5">
-      <div className="w-6/12 text-center">
+    <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center my-5 py-5">
+      <div className="w-3/4 lg:w-6/12 text-center py-4 lg:pl-[1.5rem] lg:py-0">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta sequi
         asperiores, soluta blanditiis magni natus molestiae eaque modi itaque,
         saepe delectus veritatis sit aspernatur recusandae amet facere sed
         perspiciatis maiores?
       </div>
-      <div className="w-6/12">
+      <div className="w-2/4 lg:w-6/12 py-4 lg:py-0">
         <Swiper
           effect={"cards"}
           grabCursor={true}
