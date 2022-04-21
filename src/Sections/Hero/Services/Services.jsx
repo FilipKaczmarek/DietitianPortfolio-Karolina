@@ -5,7 +5,7 @@ import ServicesCard from "../../../Components/ServicesCard/ServicesCard.jsx";
 
 export const Services = ({ className }) => {
   return (
-    <div className="max-w-screen-xl mx-auto flex flex-row justify-around my-[50px] py-10">
+    <div className="max-w-screen-xl mx-auto flex lg:flex-row lg:justify-around flex-col justify-center items-center my-[50px] py-10">
       <ServicesCard
         title={"Diet Plan"}
         cardContent={
