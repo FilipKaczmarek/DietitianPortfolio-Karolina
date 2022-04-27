@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import '../AboutMe.css'
+
 export const DesktopContent = ({ className }) => {
   return (
     <div
