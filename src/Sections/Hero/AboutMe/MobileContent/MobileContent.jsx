@@ -54,6 +54,8 @@ export const DesktopContent = ({ className }) => {
   );
 };
 
-DesktopContent.propTypes = {};
+DesktopContent.propTypes = {
+    className: PropTypes.string,
+};
 
 export default DesktopContent;

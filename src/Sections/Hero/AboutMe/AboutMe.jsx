@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import DesktopContent from './DesktopContent/DesktopContent.jsx'
 import MobileContent from './MobileContent/MobileContent.jsx'
@@ -12,7 +11,5 @@ export const AboutMe = () => {
     </div>
   );
 };
-
-AboutMe.propTypes = {};
 
 export default AboutMe;
