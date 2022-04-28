@@ -17,7 +17,7 @@ export const MobileMenu = ({ className, itemsHandlerEvent }) => {
         <Link to='/' className="w-full h-[12%] flex justify-center items-center">
           <li onClick={() => itemsHandlerEvent()}>Oferta</li>
         </Link>
-        <Link to='/' className="w-full h-[12%] flex justify-center items-center">
+        <Link to='/contactMe' className="w-full h-[12%] flex justify-center items-center">
           <li onClick={() => itemsHandlerEvent()}>Kontakt</li>
         </Link>
       </UnorderedList>

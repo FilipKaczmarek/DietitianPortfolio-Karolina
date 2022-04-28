@@ -17,7 +17,7 @@ export const DesktopNavMenu = ({ className }) => {
         <Link to='/' className="md:px-4 lg:px-8">
           <li>Oferta</li>
         </Link>
-        <Link to='/' className="md:px-4 lg:px-8">
+        <Link to='/contactMe' className="md:px-4 lg:px-8">
           <li>Kontakt</li>
         </Link>
       </UnorderedList>
